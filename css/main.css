@@ -1,0 +1,84 @@
+body {
+	font-family: Arial;
+	text-align: center;
+}
+
+#maze {
+	position: relative;
+	width: 702px;
+	height: 702px;
+	background: #996833;
+	overflow: auto;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.tile {
+	position: absolute;
+	width: 78px; /* 267px */
+	height: 78px;
+	border-radius: 5px;
+	background-size: 100%;
+	box-shadow: inset 0 0 5px #000;
+	float: left;
+}
+
+.tile.fixed {
+	box-shadow: inset 0 0 10px #000;
+}
+
+.tile.corner {
+	background-image: url('../img/corner.png');
+}
+
+.tile.straight {
+	background-image: url('../img/straight.png');
+}
+
+.tile.crossing {
+	background-image: url('../img/crossing.png');
+}
+
+.tile.north {}
+
+.tile.east {
+	-webkit-transform: rotate(90deg);
+	transform: rotate(90deg);
+}
+
+.tile.south {
+	-webkit-transform: rotate(180deg);
+	transform: rotate(180deg);
+}
+
+.tile.west {
+	-webkit-transform: rotate(270deg);
+	transform: rotate(270deg);
+}
+
+.entrance {
+	position: relative;
+	top: 50%;
+	left: 50%;
+	margin-left: -15px;
+	margin-top: -15px;
+	width: 30px;
+	height: 30px;
+	border-radius: 15px;
+}
+
+.entrance.red {
+	background-image: linear-gradient(-45deg, #990000 0%, #330000 100%);
+}
+
+.entrance.brown {
+	background-image: linear-gradient(-45deg, #CC9966 0%, #999966 100%);
+}
+
+.entrance.white {
+	background-image: linear-gradient(-45deg, #FFFFFF 0%, #AAAAAA 100%);
+}
+
+.entrance.blue {
+	background-image: linear-gradient(-45deg, #3366CC 0%, #336699 100%);
+}
